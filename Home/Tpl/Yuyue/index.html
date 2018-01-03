@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maximum-scale=1,user-scale=1, width=device-width, initial-scale=1 ">
+
+	<title>预约中心</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost/Hospital/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Hospital/Public/css/index.css" />
+    <style type="text/css"> 
+    	.Link{
+			margin-top:150px;	
+		}
+    </style>
+    
+</head>
+<body class="lead">
+	<include file="Public:title"/>
+	<div  style="padding-top:100px;">
+		
+    	<div class="container" style="background:#;">
+			<div class="dropdown">
+				<button class="btn btn-info" data-toggle="dropdown">
+					预约挂号方式
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+				
+					<li class="active"><a href="#">按疾病分诊查询</a></li>
+					<li><a href="#">按医生查询</a></li>
+					<li><a href="#">停诊通知</a></li>
+
+					<li><a href="#">官方微信预约</a></li>
+
+				</ul>
+			</div>
+			<ol class="breadcrumb">
+				<li>您所在的区域是:</li>
+				<li><a href="http://localhost/hospital/index.php">首页</a></li>
+				<li><a href="http://localhost/hospital/index.php/Yuyue/index">预约中心</a></li>
+			</ol>
+        	
+            <div class="container" style="background:#F5F5F5;">
+				<div class="row" style="height:60px;line-height:60px;">
+					<volist name="keshi" id="vo">
+						<div class="col-lg-3 col-md-4 col-sm-6"><a href="__URL__/keshi/name/<{$vo.name}>"><{$vo.name}></a></div>
+						
+					</volist>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="Link">
+        	
+    </div>
+    <include file="Public:footer"/>
+	
+	
+	<script src="http://localhost/Hospital/bootstrap/js/jquery.min.js"></script>
+	<script src="http://localhost/Hospital/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

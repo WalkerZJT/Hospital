@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maximum-scale=1,user-scale=1, width=device-width, initial-scale=1 ">
+
+	<title>欢迎来到Walker医院</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost/Hospital/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Hospital/Public/css/index.css" />
+    <style type="text/css">
+    	li{
+			height:30px;line-height:30px;font-size:16px;}
+    </style>
+</head>
+<body class="lead" style="background:#F8F8F8;">
+	  
+
+	<div class="container" style="padding-top:150px;">
+    	
+    	<table class="table table-striped table-hover table-responsive">
+    	<thead>
+        	<p>
+    			一共查询了：<{$m}>条数据,平均分数是：<{$avg}>
+   		    </p>
+        	<tr class="danger">
+            	<td>编号</td>
+                <td>姓名</td>
+                <td>成绩</td>
+            </tr>
+        </thead>
+        <tbody>
+        <?php  $d=0; ?>
+        	<volist name="data" id="vo">
+        	<tr class="info">
+            	<td><{$vo.id}></td>
+                <td><{$vo.name}></td>
+                <td><{$vo.grades}></td>
+              
+            
+            </tr>
+            </volist>
+        </tbody>
+    </table>
+    
+    </div>
+  
+	
+	
+	
+	<script src="http://localhost/Hospital/bootstrap/js/jquery.min.js"></script>
+	<script src="http://localhost/Hospital/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
